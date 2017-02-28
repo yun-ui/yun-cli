@@ -1,0 +1,34 @@
+{
+  "name": "yun-cli",
+  "version": "0.0.1",
+  "author": "haoyang_hu <hhyuestc@gmail.com>",
+  "description": "A simple CLI for scaffolding Vue.js projects with yun-ui.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "bin": {
+    "yun": "bin/yun"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yun-ui/yun-cli.git"
+  },
+  "keywords": [
+    "yun-ui",
+    "cli"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yun-ui/yun-cli/issues"
+  },
+  "homepage": "https://github.com/yun-ui/yun-cli#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "ora": "^1.1.0",
+    "shelljs": "^0.7.6"
+  }
+}

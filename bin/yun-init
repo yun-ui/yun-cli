@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+const program = require('commander')
+const shell = require('shelljs')
+const child_process = require('child_process')
+const exec = child_process.exec
+// const execSync = child_process.execSync
+
+program
+    .usage('<project_name>')
+    .description('init a vue.js project with yun-ui template.')
+
+program.on('--help', function () {
+    console.log('  Examples:');
+    console.log('');
+    console.log('    yun init project_name');
+    console.log('');
+});
+
+program.parse(process.argv)
+
+if (program.args.length !== 1) {
+    return program.help()
+}
+let str
+if (shell.which('vue')) {
+    str = 'vue init skyang/vue-yun-template ' + program.args[0]
+    exec(str)
+} else {
+    str = 'npm install -g vue-cli && vue init skyang/vue-yun-template ' + program.args[0]
+    shell.exec(str)
+}
